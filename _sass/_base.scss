@@ -5,10 +5,12 @@ $font-header: 'Space Mono', monospace;
 $font-body: 'Inconsolata', monospace;
 $font-post: 'Lora', serif;
 
-$color-alpha: #9f8f68;
-$color-alpha--light: #f5f3ef;
+$color-alpha: #365fa0;
+$color-alpha--light: lighten($color-alpha, 30%);
+$color-alpha--lighten: lighten($color-alpha, 50%);
 
 $color-black: #0a0a0a;
+$color-gray-dark: lighten($color-black, 40%);
 $color-grey: #f8f9f9;
 $color-white: #fff;
 

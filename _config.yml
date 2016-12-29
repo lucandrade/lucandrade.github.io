@@ -1,23 +1,34 @@
 # Site settings
-email: 
+email:
 baseurl: ""
-paginate: 5
+paginate: 4
 paginate_path: "/blog/page-:num"
-google_analytics: 
+google_analytics:
 
 # SEO settings
-title: Trophy
-description: 
+title: Lucas Andrade
+description:
 url: ""
-twitter_username: 
-default_img: 
+twitter_username:
+default_img:
 
 # Profile settings
-name: 
-profile_img: 
-profile: 
+name:
+profile_img:
+profile:
 social:
-  github: 
+  at: mailto:lucasandradedeveloper@gmail.com
+  github: https://gitbub.com/lucandrade
+  linkedin: https://br.linkedin.com/in/lucas-andrade-39b901b1
+# navigation
+navigation:
+- text: Posts
+  url: /
+- text: Categories
+  url: /categories/
+  contains: /category/
+- text: About
+  url: /about/
 
 # Build settings
 include: ["_categories"]

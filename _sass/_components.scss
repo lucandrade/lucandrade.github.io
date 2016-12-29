@@ -18,7 +18,7 @@
     padding-left: 10em;
     padding-right: 10em;
   }
-  
+
   &__item {
     cursor: pointer;
 
@@ -50,27 +50,43 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;;
     height: 100%;
     width: 100%;
     padding: 2em;
-
+    background: $color-alpha;
     color: $color-white;
 
-    span {
-      @extend %letter-spacing;
+    h1 {
+        width: 100%;
+    }
 
-      font-family: $font-body;
+    .buttons {
+        padding-left: 0;
+        list-style: none;
+        display: flex;
+        justify-content: flex-start;
+        margin-top: 0;
+        width: 100%;
+    }
+
+    .links {
+        font-size: 1.5em;
+        width: 100%;
+        a {
+            color: #fff;
+            padding-bottom: 5px;
+            &:hover,
+            &.active {
+                border-bottom: 3px solid #fff;
+            }
+        }
     }
   }
 }
 
 .preview {
   transition: background-color 0.2s ease-in-out;
-  
-  &:nth-child(even) {
-    background-color: $color-white;
-  }
 
   &:hover {
     background-color: $color-alpha--light;
@@ -78,6 +94,10 @@
     .preview__more {
       box-shadow: inset 175px 0 0 0 $color-alpha;
       color: $color-white;
+    }
+
+    .preview__header {
+        // border-bottom: solid .1em $color-alpha;
     }
   }
 
@@ -91,28 +111,36 @@
     padding: 2em 1em;
 
     @media (min-width: $mq-md) {
-      padding: 4em 8em;
+      padding: 2em 4em;
     }
 
     @media (min-width: $mq-xxl) {
       padding-left: 10em;
       padding-right: 10em;
     }
-  }
-
-  &__date {
-    font-family: $font-header;
-    color: $color-black;
+    line-height: 1.2;
   }
 
   &__header {
     color: $color-alpha;
+    margin-bottom: 0.1em;
+    padding-bottom: .02em;
+    font-size: 2em;
+    border-bottom: solid .1em transparent;
+  }
 
-    margin-bottom: 0.5em;
+  &__date {
+    font-family: $font-header;
+    color: $color-gray-dark;
+    margin-bottom: 0.8em;
+    display: block;
   }
 
   &__excerpt {
     color: $color-black;
+    line-height: 1.6;
+    margin-bottom: 0;
+    font-size: 1.2em;
   }
 
   &__more {
@@ -130,7 +158,77 @@
   padding: 2em 1em;
 
   @media (min-width: $mq-md) {
-    padding: 4em 2em;
+    padding: 2em;
+  }
+}
+
+.fixed-navigation {
+    @include flex-grid(1, 2, $xxl: 3, $pad: 0.25em);
+    display: none;
+
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    width: 100%;
+    background: $color-white;
+
+    @media (min-width: $mq-md) {
+      padding: 2em;
+      display: block;
+    }
+
+    h2 {
+        max-width: 65%;
+        text-align: right;
+        color: $color-alpha;
+        padding: 0;
+        font-size: 2em;
+        line-height: 1;
+        .back {
+            float: left;
+            font-size: .6em;
+            margin-top: .6em;
+        }
+    }
+
+    &:after {
+        position: absolute;
+        content: '';
+        margin-top: 50px;
+    }
+}
+
+.back {
+  @extend %letter-spacing;
+
+  display: flex;
+  align-items: center;
+
+  font-family: $font-body;
+
+  i {
+
+    @media (min-width: $mq-sm) {
+      margin-right: 0.5em;
+    }
+  }
+
+  span {
+    display: none;
+
+    @media (min-width: $mq-sm) {
+      display: block;
+    }
+  }
+
+  &--black {
+    color: $color-black;
+
+    &:hover,
+    &:active,
+    &:focus {
+      color: $color-black;
+    }
   }
 }
 
@@ -168,7 +266,7 @@
       &:after {
         opacity: 1;
       }
-      
+
       .card__more {
         box-shadow: inset 175px 0 0 0 $color-alpha;
         color: $color-white;
@@ -264,7 +362,7 @@
 
     & > *:not(:last-child) {
       margin-right: 1em;
-    }    
+    }
   }
 }
 
@@ -305,80 +403,88 @@
 /**
  * Navigation
  */
-.nav {
-  @extend %letter-spacing;
+ .nav {
+   @extend %letter-spacing;
 
-  position: absolute;
-  top: 1.25em;
-  left: 1em;
-  z-index: 99;
+   position: absolute;
+   top: 1.25em;
+   left: 1em;
+   z-index: 99;
 
-  display: flex;
-  align-items: center;
+   display: flex;
+   align-items: center;
 
-  font-family: $font-body;
+   font-family: $font-body;
 
-  @media (min-width: $mq-sm) {
-    left: 2em;
-  }
+   @media (min-width: $mq-sm) {
+     left: 2em;
+   }
 
-  i {
+   i {
 
-    @media (min-width: $mq-sm) {
-      margin-right: 0.5em;
-    }
-  }
+     @media (min-width: $mq-sm) {
+       margin-right: 0.5em;
+     }
+   }
 
-  span {
-    display: none;
+   span {
+     display: none;
 
-    @media (min-width: $mq-sm) {
-      display: block;
-    }
-  }
+     @media (min-width: $mq-sm) {
+       display: block;
+     }
+   }
 
-  &--black {
-    color: $color-black;
+   &--black {
+     color: $color-black;
 
-    &:hover,
-    &:active,
-    &:focus {
-      color: $color-black;
-    }
-  }
+     &:hover,
+     &:active,
+     &:focus {
+       color: $color-black;
+     }
+   }
 
-  &--white {
-    color: $color-white;
+   &--white {
+     color: $color-white;
 
-    &:hover,
-    &:active,
-    &:focus {
-      color: $color-white;
-    }
-  }
-}
+     &:hover,
+     &:active,
+     &:focus {
+       color: $color-white;
+     }
+   }
+ }
 
 /**
  * Post
  */
 .post {
-  width: 90%;
+  width: 80%;
   max-width: $mq-md;
   margin: 0 auto;
 
   font-family: $font-post;
 
-  @media (min-width: $mq-md) {
-    width: 55%;
+  font-size: 1.2em;
+  line-height: 1.8;
+
+  p {
+      margin-bottom: 2.5em;
   }
 
-  h1, 
+  h1,
   h2 {
     line-height: 1.2;
+    margin-bottom: .6em;
+    font-size: 2.5em;
   }
 
-  p:first-child {
-    font-size: 1.25em;
+  @media (min-width: $mq-md) {
+    font-size: 1.4em;
+    h1, h2 {
+        font-size: 3em;
+    }
   }
 
   a {
@@ -402,14 +508,10 @@
  * Profile Card
  */
 .profile {
-  width: 90%;
+  width: 80%;
   max-width: $mq-md;
   margin: 0 auto;
   padding-bottom: 4em;
-
-  @media (min-width: $mq-lg) {
-    width: 55%;
-  }
 
   &__card {
     @include box-shadow(1px);
@@ -470,10 +572,12 @@
 .next {
   background-color: $color-black;
 
+  display: flex;
+  flex-direction: row;
+
   &__link {
-    display: block;
-    height: 25em;
-    padding: 6em 0;
+      flex: 1;
+    padding: 2em 0;
 
     color: $color-white;
     background-size: cover;
@@ -488,7 +592,7 @@
       color: $color-white;
     }
 
-    &:hover:after {
+    &:hover {
       background-color: rgba($color-alpha, 0.8);
     }
   }
@@ -536,4 +640,29 @@
     padding-left: 1em;
     padding-right: 1em;
   }
+}
+
+.btn-outline {
+    margin-top: 3vh;
+    border: solid 2px #fff;
+    font-size: 1em;
+    background: #fff;
+}
+
+.btn-social {
+    display: inline-block;
+    border: 2px solid #fff;
+    border-radius: 100%;
+    text-align: center;
+    width: 2.5em;
+    height: 2.5em;
+    font-size: 1.2em;
+    line-height: 2.5em;
+    color: $color-alpha;
+    transition: none;
+    &:hover {
+        opacity: 0.75;
+        background: 0;
+        color: #fff;
+    }
 }
