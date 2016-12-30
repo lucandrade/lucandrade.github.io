@@ -13,8 +13,8 @@ twitter_username:
 default_img:
 
 # Profile settings
-name:
-profile_img:
+name: "Lucas Andrade"
+profile_img: /assets/img/me.jpg
 profile:
 social:
   at: mailto:lucasandradedeveloper@gmail.com
