@@ -13,6 +13,9 @@ $color-black: #0a0a0a;
 $color-gray-dark: lighten($color-black, 40%);
 $color-grey: #f8f9f9;
 $color-white: #fff;
+$color-blockquote: rgba(0,0,0,.4);
+
+$bg-gray: rgba(0,0,0,.05);
 
 $mq-xs: 20em;
 $mq-sm: 30em;
@@ -20,6 +23,8 @@ $mq-md: 54em;
 $mq-lg: 64em;
 $mq-xl: 76.5em;
 $mq-xxl: 114em;
+
+$post-margin-bottom: 2.5em;
 
 /**
  * Base Settings/Overwrite Normalize
