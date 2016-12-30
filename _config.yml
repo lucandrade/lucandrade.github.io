@@ -23,7 +23,7 @@ social:
   twitter: https://twitter.com/delucalabs
 # navigation
 navigation:
-- text: Posts
+- text: Blog
   url: /
 - text: Categories
   url: /categories/
