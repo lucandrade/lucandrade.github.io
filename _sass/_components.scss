@@ -486,6 +486,10 @@
     font-size: $post-margin-bottom;
   }
 
+  h4 {
+      color: $color-gray-dark;
+  }
+
   @media (min-width: $mq-md) {
     font-size: 1.4em;
     h1, h2 {
@@ -520,6 +524,7 @@
     margin: 0;
     margin-bottom: $post-margin-bottom;
     background: $bg-gray;
+    overflow: scroll;
     code {
         background: transparent;
     }
