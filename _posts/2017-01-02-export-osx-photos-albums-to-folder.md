@@ -1,10 +1,10 @@
 ---
 layout: post
-title: Export OSX Photos Albums to Folder
+title: "Export OSX Photos Albums to Folder"
 date: 2017-01-02
 permalink: /post/:year/:month/:day/:title/
 categories:
-  - Tips & Tricks
+  - "Tips & Tricks"
 description:
 ---
 A friend asked me to export his albums from a Photos Library.  
