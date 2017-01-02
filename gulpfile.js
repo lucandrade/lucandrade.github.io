@@ -32,6 +32,7 @@ gulp.task('create-post', function () {
                     }
                     var post = data.replace('{{title}}', title);
                     post = post.replace('{{categories}}', categories.join('\n  '));
+                    post = post.replace('{{pl}}', 'permalink');
                     post = post.replace('{{date}}', formatedDate);
                     var fileName = [formatedDate, slugTitle].join('-') + '.md';
                     fs.writeFile('./_posts/' + fileName, post, function (err, data) {

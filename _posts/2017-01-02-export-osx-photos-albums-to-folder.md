@@ -2,7 +2,7 @@
 layout: post
 title: "Export OSX Photos Albums to Folder"
 date: 2017-01-02
-permalink: /post/:year/:month/:day/:title/
+permalink: /post/:year/:month/:day/:title.html
 categories:
   - "Tips & Tricks"
 description:
