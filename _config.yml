@@ -25,6 +25,7 @@ social:
 navigation:
 - text: Blog
   url: /
+  contains: /post/
 - text: Categories
   url: /categories/
   contains: /category/
