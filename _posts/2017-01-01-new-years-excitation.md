@@ -5,7 +5,7 @@ date: 2017-01-01
 permalink: /post/:year/:month/:day/:title.html
 categories:
   - Stuff
-description:
+description: It's not gonna happen
 ---
 Happy new year everybody!  
 About that, I have something to say.  
