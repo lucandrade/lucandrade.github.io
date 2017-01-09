@@ -2,10 +2,13 @@
 layout: post
 title: Laravel 5 API with Docker - Part 1
 date: 2017-01-08
-permalink: /post/:year/:month/:day/:title
+permalink: /post/:year/:month/:day/:title.html
+image: /assets/docker_laravel.jpg
+image_width: 800
+image_height: 311
 categories:
   - DevOps
-description:
+description: A Laravel and Docker series
 ---
 Hello everyone.  
 I'm starting a new series about Laravel 5 and Docker and this is the first post.  

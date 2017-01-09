@@ -2,7 +2,7 @@
 layout: post
 title: "New Years Excitation"
 date: 2017-01-01
-permalink: /post/:year/:month/:day/:title
+permalink: /post/:year/:month/:day/:title.html
 categories:
   - Stuff
 description:
