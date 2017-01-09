@@ -11,6 +11,8 @@ description:
 url: "https://lucandrade.github.io"
 twitter_username:
 default_img: https://lucandrade.github.io/assets/img/me.jpg
+default_img_width: 450
+default_img_height: 676
 
 # Profile settings
 name: "Lucas Andrade"
