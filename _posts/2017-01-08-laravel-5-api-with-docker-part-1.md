@@ -3,7 +3,7 @@ layout: post
 title: Laravel 5 API with Docker - Part 1
 date: 2017-01-08
 permalink: /post/:year/:month/:day/:title.html
-image: /assets/docker_laravel.jpg
+image: /assets/img/docker_laravel.jpeg
 image_width: 800
 image_height: 311
 categories:
