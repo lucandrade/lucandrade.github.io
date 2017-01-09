@@ -498,7 +498,8 @@
   }
 
   a {
-    border-bottom: 1px solid $color-alpha;
+      color: lighten($color-alpha, 5%);
+    border-bottom: 2px solid $color-alpha;
   }
 
   img {

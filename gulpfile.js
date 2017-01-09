@@ -5,7 +5,7 @@ var fs = require('fs');
 var dateFormat = require('dateformat');
 
 gulp.task('create-post', function () {
-    gulp.src('post_template.md')
+    gulp.src('post_tmp')
         .pipe(prompt.prompt(
             [{
                 type: 'input',
@@ -25,7 +25,7 @@ gulp.task('create-post', function () {
                 var categories = res.categories.split(',').map(function (category) {
                     return "- " + category.trim();
                 });
-                fs.readFile('./post_template.md', 'utf-8', function (err, data) {
+                fs.readFile('./post_tmp', 'utf-8', function (err, data) {
                     if (err) {
                         console.error('Error reading template post file');
                         return;
