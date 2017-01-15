@@ -3,6 +3,7 @@ layout: post
 title: {{title}}
 date: {{date}}
 {{pl}}: /post/:year/:month/:day/:title.html
+crosspost_to_medium: true
 categories:
   {{categories}}
 description:
