@@ -20,22 +20,22 @@ layout: default
       {% include profile.html %}
       {% if page.previous.url or page.next.url %}
       <section class="pagination">
-          {% if page.next.url %}
-          <a class="next__link" href="{{page.next.url | prepend: site.baseurl }}">
-            <div class="next__container">
-              <span>Previous</span>
-              <h2>{{page.next.title}}</h2>
-            </div>
-          </a>
-          {% endif %}
         {% if page.previous.url %}
         <a class="next__link" href="{{page.previous.url | prepend: site.baseurl }}">
           <div class="next__container">
-            <span>Next</span>
+            <span>Previous</span>
             <h2>{{page.previous.title}}</h2>
           </div>
         </a>
         {% endif %}
+          {% if page.next.url %}
+          <a class="next__link" href="{{page.next.url | prepend: site.baseurl }}">
+            <div class="next__container">
+              <span>Next</span>
+              <h2>{{page.next.title}}</h2>
+            </div>
+          </a>
+          {% endif %}
       </section>
     {% endif %}
   </div>
