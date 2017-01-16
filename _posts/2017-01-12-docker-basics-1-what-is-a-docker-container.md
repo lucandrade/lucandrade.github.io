@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Docker Basics - Part 1 - What is a Docker Container?
+title: "Docker Basics - #1 What is a Docker Container?"
 date: 2017-01-12
 permalink: /post/:year/:month/:day/:title.html
 categories:
@@ -9,27 +9,29 @@ description: It is not a Virtual Machine
 ---
 Hello everybody!
 
-Here is a series of posts about Docker.  
+I'm starting a new series about Docker.  
+In this first post I'll explain to you how Docker works.  
 Let get started.  
 
 Docker is about container.  
 Container is a OS that run only one process. The container will shutdown if this process is finished.  
 
 People may say container is a lightweight virtual machine.  
-There is a lot of resemblance between then.  
+Actually, there is a lot of resemblance between then.  
 They create a entirely OS apart of the host machine (This is not totally truth about Docker, we'll get there).  
 You can access the machine using ssh.  
-You can build uncountable container/virtual machines.  
-You can build a network that enable two, or more, container/virtual machine work each other.  
+You can build uncountable container/virtual machines (depends on host machine resources).  
+You can build a network that enables two, or more, container/virtual machine working each other.  
 There is one big difference between then.  
 
-See, one virtual machine creates an entirely OS, with a new Kernel, packages, all required files to make a UNIX OS run.  
+See, a virtual machine creates an entirely OS, with a new Kernel, packages, all required files that makes a UNIX OS run.  
 A Docker container borrow the host machine Kernel. All containers will run with the same kernel.  
+Take a look at the picture.  
 
 <img class="pull-right" src="{{ "/assets/img/vm_vs_docker.jpg" | prepend: site.baseurl }}" />  
 
-All processes started by the virtual machine are executed inside the virtual machine, the host machine is not affected.  
-All processes started by the Docker container are handled by the host machine, this happen because of the shared Kernel.  
+Another thing, all processes started by the virtual machine are executed inside the virtual machine, the host machine is not affected.  
+All processes started by the Docker container are handled by the host machine. This happen because of the shared Kernel!  
 
 ```
 # Running processes on Host for a VM  
@@ -51,4 +53,4 @@ $ pstree docker
 ...
 ```
 
-The next post I'll show you how run Containers. Cya!
+Next, [{{page.next.title}}]({{page.next.url}}).
