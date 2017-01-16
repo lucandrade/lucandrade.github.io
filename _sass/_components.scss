@@ -515,13 +515,13 @@
   }
 
   code {
-      padding: .2em .4em;
+      padding: 0 .4em!important;
       background: $bg-gray;
       border-radius: .15em;
   }
 
   pre {
-    padding: 1.2em;
+    padding: .6em;
     margin: 0;
     margin-bottom: $post-margin-bottom;
     background: $bg-gray;
