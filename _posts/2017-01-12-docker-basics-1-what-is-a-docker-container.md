@@ -20,7 +20,7 @@ People may say container is a lightweight virtual machine.
 In fact, there is a lot of resemblance between them.  
 They create new OS inside the host machine (This is not totally true about Docker, we'll get there).  
 You can access the machine using ssh.  
-You can create as many container/virtual machines as you want (depends on host machine resources).  
+You can create as many container/virtual machines as you want (it depends on host machine resources).  
 You can build a network that enables two, or more, container/virtual machine to work with each other.  
 However, there is one big difference between them.  
 
