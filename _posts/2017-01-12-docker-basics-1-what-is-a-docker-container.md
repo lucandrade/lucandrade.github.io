@@ -18,9 +18,9 @@ Container is an OS that runs only one process. The container will shutdown if th
 
 People may say container is a lightweight virtual machine.  
 In fact, there is a lot of resemblance between them.  
-They create new OS inside the host machine (This is not totally truth about Docker, we'll get there).  
+They create new OS inside the host machine (This is not totally true about Docker, we'll get there).  
 You can access the machine using ssh.  
-You can build uncountable container/virtual machines (depends on host machine resources).  
+You can create as many container/virtual machines as you want (depends on host machine resources).  
 You can build a network that enables two, or more, container/virtual machine to work with each other.  
 However, there is one big difference between them.  
 
