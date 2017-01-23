@@ -14,7 +14,8 @@ In this first post I'll explain how Docker works.
 Let's get started.  
 
 Docker is about container.  
-Container is an OS that runs only one process. The container will shutdown if the process is finished.  
+Container is a virtualized environment that isolates a set of process and resources, like CPU, memory, etc.  
+It runs just one process. The container will shutdown if the process is finished.  
 
 People may say container is a lightweight virtual machine.  
 In fact, there is a lot of resemblance between them.  
