@@ -10,3 +10,16 @@
   'animations',
   'helpers'
 ;
+
+.card {
+  &.project {
+    .card__container {
+      padding: 1em;
+    }
+
+    .card__header {
+      line-height: 1;
+      margin-bottom: .5em;
+    }
+  }
+}

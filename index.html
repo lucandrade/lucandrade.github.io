@@ -1,28 +1,21 @@
 ---
 layout: default
-title: Blog
+title: Projects
 ---
 <section class="previews">
   {% include menu.html %}
   <div>
-    <ul itemscope itemtype="http://schema.org/Blog">
+    <ul class="cards" itemscope itemtype="http://schema.org/Blog">
       {% for post in paginator.posts %}
-        {% include post.html post=post %}
+      <li class="card project">
+        <a class="card__link" href="{{ post.project_url }}">
+          <div class="card__container">
+            <h2 class="card__header">{{ post.title }}</h2>
+            <img src="{{ post.image | prepend: site.baseurl }}" />
+          </div>
+        </a>
+      </li>
       {% endfor %}
     </ul>
-
-    {% if paginator.total_pages > 1 %}
-      <div class="pagination">
-        {% if paginator.previous_page %}
-          <a href="{{ paginator.previous_page_path | prepend: site.baseurl }}">Previous</a>
-        {% endif %}
-
-        {% if paginator.next_page %}
-          <a href="{{ paginator.next_page_path | prepend: site.baseurl }}">Next</a>
-        {% endif %}
-      </div>
-    {% endif %}
-
   </div>
-
 </section>

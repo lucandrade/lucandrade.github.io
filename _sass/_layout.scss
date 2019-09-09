@@ -66,7 +66,13 @@ section {
 
       @media (min-width: $mq-md) {
         margin-left: 30%;
-        padding-top: 6em;
+      }
+
+      .fixed-navigation ~ ul,
+      .fixed-navigation ~ section {
+        @media (min-width: $mq-md) {
+          margin-top: 6em;
+        }
       }
     }
   }

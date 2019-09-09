@@ -23,20 +23,15 @@ social:
   at: mailto:lucasandradedeveloper@gmail.com
   github: https://gitbub.com/lucandrade
   linkedin: https://br.linkedin.com/in/lucas-andrade-39b901b1
-  twitter: https://twitter.com/delucalabs
 # navigation
 navigation:
-- text: Blog
+- text: Projects
   url: /
   contains: /post/
-- text: Categories
-  url: /categories/
-  contains: /category/
 - text: About
   url: /about/
 
 # Build settings
-include: ["_categories"]
 exclude: ["_screenshots", "Gemfile", "Gemfile.lock"]
 markdown: kramdown
 
