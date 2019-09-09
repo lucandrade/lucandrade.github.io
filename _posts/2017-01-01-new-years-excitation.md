@@ -3,7 +3,6 @@ layout: post
 title: "New Years Excitation"
 date: 2017-01-01
 permalink: /post/:year/:month/:day/:title.html
-crosspost_to_medium: true
 categories:
   - Stuff
 description: It's not gonna happen
